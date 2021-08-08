@@ -6,8 +6,8 @@
         <item name="colorPrimaryVariant">@color/app_font</item> <!--Color para la fuente del boton primary-->
         <item name="colorOnPrimary">@color/app_font</item> <!--Color para la fuente cuando el primario esta seleccionado-->
 
-        <item name="colorSurface">@color/app_font</item> <!--Color para la fuente-->
-        <item name="colorOnSurface">@color/app_font</item> <!--Color para la fuente-->
+        <item name="colorSurface">@color/app_font</item> <!--Color para la fuente de una tarjeta-->
+        <item name="colorOnSurface">@color/black</item> <!--Color para la fuente-->
 
         <item name="android:colorBackground">@color/app_background</item> <!--Color para el fondo-->
         <item name="android:colorForeground">@color/app_font</item> <!--Color para el texto de os inputs-->
