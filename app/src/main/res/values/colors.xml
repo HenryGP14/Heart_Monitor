@@ -8,14 +8,11 @@
     <color name="black">#FF000000</color>
 
     <!-- Colores de la app -->
-    <color name="white">#FFFFFFFF</color>
-    <color name="app_font">#05294A</color>
-    <color name="app_button">#07559C</color>
-    <color name="app_panel">#041D34</color>
-    <color name="app_button_accept">#0B6A25</color>
-    <color name="app_button_emergency">#C63333</color>
-    <color name="pie">#C68B33</color>
-    <color name="email">#C63333</color>
-    <color name="gender">#337FC6</color>
-    <color name="user">#C633B7</color>
+    <color name="app_font">#FFFFFFFF</color>
+    <color name="app_background">#05294A</color>
+    <color name="app_button">#07559c</color>
+    <color name="app_border_input">#c0c0c0</color>
+    <color name="app_item">#041d34</color>
+    <color name="app_error">#F44336</color>
+    <color name="app_error_font">#F3CBC9</color>
 </resources>
