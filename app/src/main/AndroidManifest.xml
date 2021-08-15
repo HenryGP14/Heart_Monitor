@@ -14,13 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HeartMonitor">
         <activity
-            android:name=".ScanActivity"
+            android:name=".ConfigActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />
         <activity
-            android:name=".ConfigActivity"
+            android:name=".ScanActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
