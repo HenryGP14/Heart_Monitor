@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme_HeartMonitor" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.HeartMonitor" parent="Theme.MaterialComponents.DayNight.NoActionBar">
 
         <item name="colorPrimary">@color/app_button</item> <!--Color para los botones-->
         <item name="colorPrimaryVariant">@color/app_font</item> <!--Color para la fuente del boton primary-->
