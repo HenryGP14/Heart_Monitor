@@ -1,106 +1,186 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ConfiguracionActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dpMarginLR"
+        android:layout_marginRight="@dimen/dpMarginLR"
+        android:layout_marginTop="@dimen/dpMarginTop">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="@dimen/dpSizeIcon"
+            android:layout_height="@dimen/dpSizeIcon"
+            android:backgroundTint="@color/app_background"
+            app:srcCompat="@drawable/ic_atras"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/dpMarginLR"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageButton">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="@dimen/dpSizeIcon"
+                android:layout_height="@dimen/dpSizeIcon"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_settings" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="Configuración"
+                android:textSize="@dimen/spNivel1" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dpMarginLR"
+        android:layout_marginTop="@dimen/dpMarginTop"
+        android:layout_marginRight="@dimen/dpMarginLR"
+        android:background="@color/app_item"
+        android:padding="@dimen/dpPaddingItem">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView"
+            android:layout_width="@dimen/dpSizeImg"
+            android:layout_height="@dimen/dpSizeImg"
+            android:src="@drawable/user"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            app:layout_constraintStart_toEndOf="@+id/circleImageView"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Darlin Omar Buenaño Vera"
+                android:textSize="@dimen/spNivel2" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Masculino, 21 años de edad"
+                android:textSize="@dimen/spNivel4" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="26dp"
+            android:layout_height="55dp"
+            android:background="@color/app_item"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_siguiente" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dpMarginLR"
+        android:layout_marginTop="@dimen/dpPaddingItem"
+        android:layout_marginRight="@dimen/dpMarginLR"
+        android:background="@color/app_item"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/dpPaddingItem">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="20dp">
+            android:orientation="horizontal">
 
-            <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="@dimen/dpSizeIcon"
-                android:layout_height="@dimen/dpSizeIcon"
-                android:backgroundTint="@color/app_background"
-                app:srcCompat="@drawable/ic_atras" />
+            <ImageView
+                android:layout_width="@dimen/dpSizeImg"
+                android:layout_height="@dimen/dpSizeImg"
+                app:srcCompat="@drawable/ic_cellphone" />
 
-            <LinearLayout
+            <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginEnd="16dp"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageButton">
+                android:layout_height="@dimen/dpSizeImg"
+                app:srcCompat="@drawable/ic_enlace" />
 
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="@dimen/dpSizeIcon"
-                    android:layout_height="@dimen/dpSizeIcon"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/ic_settings" />
+            <ImageView
+                android:layout_width="@dimen/dpSizeImg"
+                android:layout_height="@dimen/dpSizeImg"
+                app:srcCompat="@drawable/ic_smartwatch" />
+        </LinearLayout>
 
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="26dp"
-                    android:layout_marginLeft="5dp"
-                    android:gravity="center"
-                    android:text="Configuración"
-                    android:textSize="@dimen/spNivel1" />
-            </LinearLayout>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="@dimen/dpMarginLR"
-            android:layout_marginTop="@dimen/dpMarginTop"
-            android:layout_marginRight="@dimen/dpMarginLR"
-            android:background="@color/app_item"
-            android:padding="8dp">
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/circleImageView"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:src="@drawable/user" />
-
-            <LinearLayout
-                android:id="@+id/linearLayout"
-                android:layout_width="wrap_content"
-                android:layout_height="55dp"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:paddingLeft="8dp"
-                app:layout_constraintStart_toEndOf="@+id/circleImageView">
-
-                <TextView
-                    android:id="@+id/textView16"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Darlin Omar Buenaño Vera"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/textView15"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="Masculino, 21 años de edad"
-                    android:textSize="12sp" />
-            </LinearLayout>
-
-            <ImageButton
-                android:id="@+id/imageButton2"
-                android:layout_width="26dp"
-                android:layout_height="55dp"
-                android:background="@color/app_item"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:srcCompat="@drawable/ic_siguiente" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
+            android:layout_marginTop="4dp"
+            android:text="SmartWatch no conectado"
+            android:textSize="@dimen/spNivel3" />
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dpMarginLR"
+        android:layout_marginRight="@dimen/dpMarginLR"
+        android:layout_marginTop="@dimen/dpPaddingItem"
+        android:background="@color/app_item"
+        android:padding="@dimen/dpPaddingItem"
+        android:textAlignment="center"
+        android:text="Buscar dispositivo"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dpMarginLR"
+        android:layout_marginTop="@dimen/dpPaddingItem"
+        android:layout_marginRight="@dimen/dpMarginLR"
+        android:padding="@dimen/dpPaddingItem"
+        android:background="@color/app_item"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/dpSizeIcon"
+            android:layout_height="@dimen/dpSizeIcon"
+            android:src="@drawable/ic_cuenta" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dpPaddingItem"
+            android:text="Contactos que monitorean mi salud" />
+
+        <ImageButton
+            android:layout_width="@dimen/dpSizeIcon"
+            android:layout_height="@dimen/dpSizeIcon"
+            android:src="@drawable/ic_siguiente"
+            android:background="none" />
+    </LinearLayout>
+</LinearLayout>

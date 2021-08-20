@@ -3,10 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Ingenieria de Software/7mo Semestre/Aplicaciones Distribuidas/Proyecto de Aula/Heart_Monitor/app/src/main/res/drawable/ic_cellphone.xml" value="0.2890625" />
         <entry key="..\:/Ingenieria de Software/7mo Semestre/Aplicaciones Distribuidas/Proyecto de Aula/Heart_Monitor/app/src/main/res/drawable/ic_pulso.xml" value="0.16" />
         <entry key="..\:/Ingenieria de Software/7mo Semestre/Aplicaciones Distribuidas/Proyecto de Aula/Heart_Monitor/app/src/main/res/drawable/ic_settings.xml" value="0.28489583333333335" />
         <entry key="..\:/Ingenieria de Software/7mo Semestre/Aplicaciones Distribuidas/Proyecto de Aula/Heart_Monitor/app/src/main/res/font/roboto.xml" value="0.303125" />
-        <entry key="..\:/Ingenieria de Software/7mo Semestre/Aplicaciones Distribuidas/Proyecto de Aula/Heart_Monitor/app/src/main/res/layout/act_configuracion.xml" value="0.4613861386138614" />
+        <entry key="..\:/Ingenieria de Software/7mo Semestre/Aplicaciones Distribuidas/Proyecto de Aula/Heart_Monitor/app/src/main/res/layout/act_configuracion.xml" value="0.33" />
         <entry key="..\:/Ingenieria de Software/7mo Semestre/Aplicaciones Distribuidas/Proyecto de Aula/Heart_Monitor/app/src/main/res/layout/act_home.xml" value="0.33" />
         <entry key="..\:/Ingenieria de Software/7mo Semestre/Aplicaciones Distribuidas/Proyecto de Aula/Heart_Monitor/app/src/main/res/layout/act_login.xml" value="0.33" />
         <entry key="..\:/Ingenieria de Software/7mo Semestre/Aplicaciones Distribuidas/Proyecto de Aula/Heart_Monitor/app/src/main/res/layout/act_saludcardiaca.xml" value="0.33" />
