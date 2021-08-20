@@ -15,12 +15,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
             android:layout_marginTop="20dp">
 
             <ImageButton
                 android:id="@+id/imageButton"
-                android:layout_width="26dp"
-                android:layout_height="26dp"
+                android:layout_width="@dimen/dpSizeIcon"
+                android:layout_height="@dimen/dpSizeIcon"
                 android:backgroundTint="@color/app_background"
                 app:srcCompat="@drawable/ic_atras" />
 
@@ -34,8 +35,8 @@
 
                 <ImageView
                     android:id="@+id/imageView2"
-                    android:layout_width="26dp"
-                    android:layout_height="26dp"
+                    android:layout_width="@dimen/dpSizeIcon"
+                    android:layout_height="@dimen/dpSizeIcon"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/ic_settings" />
 
@@ -43,11 +44,63 @@
                     android:id="@+id/textView8"
                     android:layout_width="wrap_content"
                     android:layout_height="26dp"
+                    android:layout_marginLeft="5dp"
                     android:gravity="center"
                     android:text="Configuración"
-                    android:layout_marginLeft="5dp"/>
+                    android:textSize="@dimen/spNivel1" />
             </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dpMarginLR"
+            android:layout_marginTop="@dimen/dpMarginTop"
+            android:layout_marginRight="@dimen/dpMarginLR"
+            android:background="@color/app_item"
+            android:padding="8dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circleImageView"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:src="@drawable/user" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="8dp"
+                app:layout_constraintStart_toEndOf="@+id/circleImageView">
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Darlin Omar Buenaño Vera"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Masculino, 21 años de edad"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="26dp"
+                android:layout_height="55dp"
+                android:background="@color/app_item"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/ic_siguiente" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
