@@ -17,6 +17,9 @@
         android:theme="@style/Theme.HeartMonitor"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".MedicionFrecuenciaActivity2"
+            android:exported="true" />
+        <activity
             android:name=".ContactosActivity"
             android:exported="true" />
         <activity

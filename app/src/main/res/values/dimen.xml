@@ -7,6 +7,7 @@
 
     <dimen name="dpSizeImg">55dp</dimen>
     <dimen name="dpPaddingItem">8dp</dimen>
+    <dimen name="dpPaddingSubItem">5dp</dimen>
     <dimen name="dpPaddingContainer">16dp</dimen>
 
     <dimen name="dpRadius">9dp</dimen>
