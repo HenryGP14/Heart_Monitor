@@ -7,10 +7,12 @@
 
     <dimen name="dpSizeImg">55dp</dimen>
     <dimen name="dpPaddingItem">8dp</dimen>
+    <dimen name="dpPaddingContainer">16dp</dimen>
 
     <dimen name="dpRadius">9dp</dimen>
 
     <dimen name="dpMarginTop">20dp</dimen>
+    <dimen name="dpMarginBottom">16dp</dimen>
     <dimen name="dpMarginLR">16dp</dimen>
 
     <dimen name="dpSizeIcon">26dp</dimen>
