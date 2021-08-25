@@ -13,6 +13,7 @@
     <dimen name="dpRadius">9dp</dimen>
 
     <dimen name="dpMarginTop">20dp</dimen>
+    <dimen name="dpMarginTop5">5dp</dimen>
     <dimen name="dpMarginBottom">16dp</dimen>
     <dimen name="dpMarginLR">16dp</dimen>
 

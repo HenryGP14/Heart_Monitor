@@ -9,8 +9,10 @@
 
     <!-- Colores de la app -->
     <color name="app_font">#FFFFFFFF</color>
+    <color name="app_font_input">#B3FFFFFF</color>
     <color name="app_background">#05294A</color>
     <color name="app_button">#07559c</color>
+    <color name="app_input_tint">#0086FF</color>
     <color name="app_border_input">#c0c0c0</color>
     <color name="app_item">#041d34</color>
     <color name="app_error">#F44336</color>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dpPaddingContainer"
+    android:orientation="vertical"
+    tools:context=".RegistrarPacienteActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/dpMarginBottom">
+
+        <ImageButton
+            android:id="@+id/btnAtras_actRegisComo"
+            android:layout_width="@dimen/dpSizeIcon"
+            android:layout_height="@dimen/dpSizeIcon"
+            android:backgroundTint="@color/app_background"
+            android:src="@drawable/ic_atras"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="Registro de paciente"
+                android:textSize="@dimen/spNivel1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpMarginTop"
+        android:textSize="@dimen/spNivel2"
+        android:text="Nombres y apellidos"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpMarginTop5"
+        android:hint="Darling Omar Buenaño Vera"
+        android:textSize="@dimen/spNivel2"
+        android:inputType="text"
+        android:maxLength="32"
+        android:singleLine="true"
+        android:textColorHint="@color/app_font_input"
+        android:backgroundTint="@color/app_input_tint"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpMarginTop"
+        android:textSize="@dimen/spNivel2"
+        android:text="Nombre de usuario"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpMarginTop5"
+        android:hint="DarlingBV05"
+        android:textSize="@dimen/spNivel2"
+        android:inputType="text"
+        android:maxLength="32"
+        android:singleLine="true"
+        android:textColorHint="@color/app_font_input"
+        android:backgroundTint="@color/app_input_tint"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpMarginTop"
+        android:textSize="@dimen/spNivel2"
+        android:text="Fecha de nacimiento"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpMarginTop5"
+        android:hint="01/01/2000"
+        android:textSize="@dimen/spNivel2"
+        android:inputType="date"
+        android:maxLength="32"
+        android:singleLine="true"
+        android:textColorHint="@color/app_font_input"
+        android:backgroundTint="@color/app_input_tint"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpMarginTop"
+        android:textSize="@dimen/spNivel2"
+        android:text="Género"/>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Masculino"
+            android:buttonTint="@color/app_input_tint"
+            android:backgroundTint="@color/app_font_input"
+            android:textColor="@color/app_font_input"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dpMarginLR"
+            android:text="Femenino"
+            android:buttonTint="@color/app_input_tint"
+            android:backgroundTint="@color/app_font_input"
+            android:textColor="@color/app_font_input"/>
+    </RadioGroup>
+
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dpPaddingContainer"
+    android:orientation="vertical"
+    tools:context=".RegistrarseComoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/dpMarginBottom">
+
+        <ImageButton
+            android:id="@+id/btnAtras_actRegisComo"
+            android:layout_width="@dimen/dpSizeIcon"
+            android:layout_height="@dimen/dpSizeIcon"
+            android:backgroundTint="@color/app_background"
+            android:src="@drawable/ic_atras"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registrarse como"
+            android:textSize="@dimen/spNivel2"
+            android:layout_marginBottom="26dp"/>
+
+        <Button
+            android:id="@+id/btn_registrarPaciente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="250dp"
+            android:fontFamily="@font/roboto_regular"
+            android:padding="8dp"
+            android:text="Paciente"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="@dimen/spNivel2"
+            android:layout_marginBottom="@dimen/dpMarginBottom"/>
+
+        <Button
+            android:id="@+id/btn_registrarFamiliar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="250dp"
+            android:fontFamily="@font/roboto_regular"
+            android:padding="8dp"
+            android:text="Familiar"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="@dimen/spNivel2"/>
+
+    </LinearLayout>
+
+</LinearLayout>
