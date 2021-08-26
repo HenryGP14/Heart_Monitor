@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="@dimen/dpPaddingContainer"
@@ -36,7 +35,7 @@
                     android:layout_height="26dp"
                     android:layout_marginLeft="5dp"
                     android:gravity="center"
-                    android:text="Registro de paciente"
+                    android:text="Registro de familiar"
                     android:textSize="@dimen/spNivel1" />
 
             </LinearLayout>
@@ -86,24 +85,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dpMarginTop"
             android:textSize="@dimen/spNivel2"
-            android:text="Fecha de nacimiento"/>
-        <EditText
-            android:id="@+id/txtFechaNacimiento_actRegisPacie"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dpMarginTop5"
-            android:hint="01/01/2000"
-            android:textSize="@dimen/spNivel2"
-            android:inputType="date"
-            android:singleLine="true"
-            android:textColorHint="@color/app_font_input"
-            android:backgroundTint="@color/app_input_tint"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dpMarginTop"
-            android:textSize="@dimen/spNivel2"
             android:text="Género"/>
         <RadioGroup
             android:layout_width="match_parent"
@@ -125,24 +106,6 @@
                 android:backgroundTint="@color/app_font_input"
                 android:textColor="@color/app_font_input"/>
         </RadioGroup>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dpMarginTop"
-            android:textSize="@dimen/spNivel2"
-            android:text="Correo electrónico"/>
-        <EditText
-            android:id="@+id/txtCorreo_actRegisPacie"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dpMarginTop5"
-            android:hint="ejemplo@gmail.com"
-            android:textSize="@dimen/spNivel2"
-            android:inputType="textEmailAddress"
-            android:singleLine="true"
-            android:textColorHint="@color/app_font_input"
-            android:backgroundTint="@color/app_input_tint"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -182,6 +145,35 @@
             android:textColorHint="@color/app_font_input"
             android:backgroundTint="@color/app_input_tint"/>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dpMarginTop"
+            android:textSize="@dimen/spNivel2"
+            android:text="Usuario del paciente"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/txtBuscarUsuario_actRegisFam"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dpMarginTop5"
+                android:textSize="@dimen/spNivel2"
+                android:inputType="textPassword"
+                android:maxLength="25"
+                android:singleLine="true"
+                android:textColorHint="@color/app_font_input"
+                android:backgroundTint="@color/app_input_tint"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_buscar"/>
+        </LinearLayout>
+
         <Button
             android:id="@+id/btn_registrarPaciente_actRegisPacie"
             android:layout_width="match_parent"
@@ -198,7 +190,6 @@
             android:id="@+id/btn_cancelarRegistroPaciente"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dpMarginTop"
             android:fontFamily="@font/roboto_regular"
             android:padding="8dp"
             android:text="Cancelar"

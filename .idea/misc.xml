@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Ingenieria de Software/7mo Semestre/Aplicaciones Distribuidas/Proyecto de Aula/Heart_Monitor/app/src/main/res/drawable/ic_buscar.xml" value="0.2890625" />
         <entry key="..\:/Ingenieria de Software/7mo Semestre/Aplicaciones Distribuidas/Proyecto de Aula/Heart_Monitor/app/src/main/res/drawable/ic_candado.xml" value="0.2890625" />
         <entry key="..\:/Ingenieria de Software/7mo Semestre/Aplicaciones Distribuidas/Proyecto de Aula/Heart_Monitor/app/src/main/res/drawable/ic_cellphone.xml" value="0.2890625" />
         <entry key="..\:/Ingenieria de Software/7mo Semestre/Aplicaciones Distribuidas/Proyecto de Aula/Heart_Monitor/app/src/main/res/drawable/ic_help.xml" value="0.2890625" />
@@ -19,6 +20,7 @@
         <entry key="..\:/Ingenieria de Software/7mo Semestre/Aplicaciones Distribuidas/Proyecto de Aula/Heart_Monitor/app/src/main/res/layout/act_info_usuario.xml" value="0.33" />
         <entry key="..\:/Ingenieria de Software/7mo Semestre/Aplicaciones Distribuidas/Proyecto de Aula/Heart_Monitor/app/src/main/res/layout/act_login.xml" value="0.33" />
         <entry key="..\:/Ingenieria de Software/7mo Semestre/Aplicaciones Distribuidas/Proyecto de Aula/Heart_Monitor/app/src/main/res/layout/act_medicion_frec.xml" value="0.5" />
+        <entry key="..\:/Ingenieria de Software/7mo Semestre/Aplicaciones Distribuidas/Proyecto de Aula/Heart_Monitor/app/src/main/res/layout/act_registrar_familiar.xml" value="0.27239583333333334" />
         <entry key="..\:/Ingenieria de Software/7mo Semestre/Aplicaciones Distribuidas/Proyecto de Aula/Heart_Monitor/app/src/main/res/layout/act_registrar_paciente.xml" value="0.5" />
         <entry key="..\:/Ingenieria de Software/7mo Semestre/Aplicaciones Distribuidas/Proyecto de Aula/Heart_Monitor/app/src/main/res/layout/act_registrarse_como.xml" value="0.33" />
         <entry key="..\:/Ingenieria de Software/7mo Semestre/Aplicaciones Distribuidas/Proyecto de Aula/Heart_Monitor/app/src/main/res/layout/act_saludcardiaca.xml" value="0.33" />

@@ -17,6 +17,9 @@
         android:theme="@style/Theme.HeartMonitor"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".RegistrarFamiliarActivity"
+            android:exported="true" />
+        <activity
             android:name=".RegistrarPacienteActivity"
             android:exported="true" />
         <activity

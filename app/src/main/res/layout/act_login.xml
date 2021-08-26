@@ -1,134 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="230dp"
-        android:layout_height="230dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_corazon" />
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/dpPaddingContainer"
+        tools:context=".LoginActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/roboto_regular"
-        android:text="@string/app_name"
-        android:textAlignment="center"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            app:srcCompat="@drawable/ic_corazon" />
 
-    <EditText
-        android:id="@+id/txtUserName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#FFFFFF"
-        android:ems="10"
-        android:fontFamily="@font/roboto_regular"
-        android:hint="ejemplo_de_usuario"
-        android:inputType="textPersonName"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dpMarginTop"
+            android:layout_marginBottom="@dimen/dpMarginTop"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textSize="@dimen/spNivelTitle"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="25dp"
-        android:fontFamily="@font/roboto_regular"
-        android:text="Usuario"
-        android:textAlignment="viewStart"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dpMarginTop"
+            android:textSize="@dimen/spNivel1"
+            android:text="Usuario"/>
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="25dp"
-        android:fontFamily="@font/roboto_regular"
-        android:text="Contraseña"
-        android:textAlignment="viewStart"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtUserName" />
+        <EditText
+            android:id="@+id/txtUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="ejemplo_de_usuario"
+            android:inputType="textPersonName"
+            android:textSize="@dimen/spNivel2"
+            android:maxLength="25"
+            android:singleLine="true"
+            android:textColorHint="@color/app_font_input"
+            android:backgroundTint="@color/app_input_tint"/>
 
-    <EditText
-        android:id="@+id/txtPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:fontFamily="@font/roboto_regular"
-        android:inputType="textPassword"
-        android:hint="123456789"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dpMarginTop"
+            android:textSize="@dimen/spNivel1"
+            android:text="Contraseña"/>
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="30dp"
-        android:fontFamily="@font/roboto_regular"
-        android:text="Olvidé mis datos de la cuenta"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
+        <EditText
+            android:id="@+id/txtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="123456"
+            android:inputType="textPassword"
+            android:textSize="@dimen/spNivel2"
+            android:maxLength="25"
+            android:singleLine="true"
+            android:textColorHint="@color/app_font_input"
+            android:backgroundTint="@color/app_input_tint"/>
 
-    <Button
-        android:id="@+id/btnIniciarSesison"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:width="250dp"
-        android:fontFamily="@font/roboto_regular"
-        android:padding="8dp"
-        android:text="Iniciar sesión"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dpMarginTop"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Olvidé mis datos de la cuenta"
+            android:textAlignment="textEnd"
+            android:textSize="@dimen/spNivel2" />
 
-    <Button
-        android:id="@+id/btnRegistrarse"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:width="250dp"
-        android:fontFamily="@font/roboto_regular"
-        android:padding="8dp"
-        android:text="Registrarse"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnIniciarSesison" />
+        <Button
+            android:id="@+id/btnIniciarSesison"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dpMarginTop"
+            android:fontFamily="@font/roboto_regular"
+            android:padding="8dp"
+            android:text="Iniciar sesión"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="@dimen/spNivel1"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/btnRegistrarse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dpMarginTop5"
+            android:fontFamily="@font/roboto_regular"
+            android:padding="8dp"
+            android:text="Registrarse"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="@dimen/spNivel1"/>
+
+    </LinearLayout>
+
+</ScrollView>
