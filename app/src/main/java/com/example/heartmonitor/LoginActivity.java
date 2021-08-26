@@ -6,16 +6,17 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.util.Base64;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.heartmonitor.Interfaces.UserInterface;
-import com.example.heartmonitor.Services.RetrofitClient;
+import com.example.heartmonitor.Interfaces.UsuarioResponse;
+import com.example.heartmonitor.Models.Usuario;
+import com.example.heartmonitor.Services.RetrofitResponseClient;
 
-import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -42,50 +43,66 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 user = txtUserName.getText().toString();
                 pass = txtPassword.getText().toString();
-                String token = createToken(user, pass);
-                chequear_login(token);
+                chequear_login(user, pass);
             }
         });
 
     }
 
-    private void chequear_login(String token) {
-//        Retrofit retrofit = RetrofitClient.getRetrofit();
-//        UserInterface api = retrofit.create(UserInterface.class);
-//        Call<String> call = api.check_login(token);
-//
-//        call.enqueue(new Callback<String>() {
+//    API - Volley
+//    private void chequear_login(String user , String pass) {
+//        String URL = "http://192.168.56.1:8000/webservice/inicio-sesion/";
+//        StringRequest request = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
 //            @Override
-//            public void onResponse(Call<String> call, Response<String> response) {
-//                if (response.isSuccessful()){
-//                    if (response.body().matches("Usuario no existe")){
-//                        Toast.makeText(getApplicationContext(), "Usuario no existe", Toast.LENGTH_LONG).show();
-//                    }
-//                    else{
-//                        Toast.makeText(getApplicationContext(), "Usuario no existe", Toast.LENGTH_LONG).show();
-//                    }
-//                }else{
-//
-//                }
+//            public void onResponse(String response) {
+//                Toast.makeText(getApplicationContext(), "respose: " + response, Toast.LENGTH_LONG).show();
 //            }
+//        }, new Response.ErrorListener() {
 //            @Override
-//            public void onFailure(Call<String> call, Throwable t) {
-//                System.out.println("Error de llamada");
+//            public void onErrorResponse(VolleyError error) {
+//                System.out.println("Error de logeo");
 //            }
-//        });
-        setContentView(R.layout.act_home);
-    }
+//        }){
+//            @Override
+//            protected Map<String, String> getParams() throws AuthFailureError {
+//                HashMap param = new HashMap();
+//                param.put("usuario", "HenryPM06");
+//                param.put("clave", "123456");
+//                return param;
+//            }
+//        };
+//
+//        Volley.newRequestQueue(this).add(request);
+//    }
 
-    private String createToken(String user, String pass) {
-        byte[] data = new byte[0];
-        try {
-            data = (user + ":" + pass).getBytes("UTF-8");
-        }catch (Exception e){
-            System.out.println("Error de: " + e.getMessage());
-        }
-        return  "Basic " + Base64.encodeToString(data, Base64.NO_WRAP);
-    }
+    public void chequear_login(String user, String pass){
+        Retrofit retrofit = RetrofitResponseClient.getRetrofit();
+        UsuarioResponse API = retrofit.create(UsuarioResponse.class);
+        Map<String, String> param = new HashMap<>();
+        param.put("usuario", user);
+        param.put("clave", pass);
+        Call<Usuario> call = API.LoginRespose(param);
 
+        call.enqueue(new Callback<Usuario>() {
+            @Override
+            public void onResponse(Call<Usuario> call, Response<Usuario> response) {
+                if(response.isSuccessful()) {
+                    if(response.body().isResponse()){
+                        Toast.makeText(getApplicationContext(), response.body().getMensaje(), Toast.LENGTH_LONG).show();
+                    }else {
+                        Toast.makeText(getApplicationContext(), response.body().getMensaje(), Toast.LENGTH_LONG).show();
+                    }
+                }else {
+                    Toast.makeText(getApplicationContext(), "Mensaje: Existio un error en la captura de datos", Toast.LENGTH_LONG).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Usuario> call, Throwable t) {
+                Toast.makeText(getApplicationContext(), "Mensaje: El servidor esta apagado...", Toast.LENGTH_LONG).show();
+            }
+        });
+    }
 
     @Override
     protected void onStart() {
