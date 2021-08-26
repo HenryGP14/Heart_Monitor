@@ -6,7 +6,7 @@ public class Familiar {
     private int id;
     private String tipo_cuenta;
     private String nombres;
-    private String apelldos;
+    private String apellidos;
     private String ruta_foto;
     private String genero;
     private String celular;
@@ -23,8 +23,8 @@ public class Familiar {
         return nombres;
     }
 
-    public String getApelldos() {
-        return apelldos;
+    public String getApellidos() {
+        return apellidos;
     }
 
     public String getRuta_foto() {
