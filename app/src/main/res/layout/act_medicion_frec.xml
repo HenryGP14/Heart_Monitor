@@ -18,7 +18,8 @@
             android:layout_width="@dimen/dpSizeIcon"
             android:layout_height="@dimen/dpSizeIcon"
             android:backgroundTint="@color/app_background"
-            android:src="@drawable/ic_atras"/>
+            android:src="@drawable/ic_atras"
+            android:onClick="btnIrAtras_actMedicionFrec"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -91,7 +92,8 @@
             android:padding="@dimen/dpPaddingItem"
             android:background="@color/app_item"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:onClick="btnHoraInicio">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -117,7 +119,8 @@
             android:padding="@dimen/dpPaddingItem"
             android:background="@color/app_item"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:onClick="btnHoraFinalizacion">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -143,7 +146,8 @@
             android:padding="@dimen/dpPaddingItem"
             android:background="@color/app_item"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:onClick="btnRepetirCiclo">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -162,6 +166,24 @@
 
         </LinearLayout>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dpMarginTop"
+        android:gravity="end">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:padding="8dp"
+            android:text="Guardar"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="@dimen/spNivel3"
+            android:onClick="btnGuardarMedicionAutom"/>
     </LinearLayout>
 
 </LinearLayout>

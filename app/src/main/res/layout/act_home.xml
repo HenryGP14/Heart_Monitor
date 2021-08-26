@@ -1,123 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/dpPaddingContainer"
+    android:orientation="vertical"
     tools:context=".HomeActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
         <TextView
-            android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
             android:text="@string/app_name"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textSize="@dimen/spNivel1"
+            android:textAlignment="center"
+            android:layout_weight="1"/>
 
         <ImageView
-            android:id="@+id/btnConfiguracion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="20dp"
-            android:onClick="onClick"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_settings" />
+            android:onClick="btnIrConfig_actHome"
+            app:srcCompat="@drawable/ic_settings"/>
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/dpMarginTop">
         <TextView
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="40dp"
             android:text="Frecuencia cardiaca"
             android:textAlignment="textStart"
             android:textColor="#B3FFFFFF"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+            android:textSize="@dimen/spNivel3" />
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dpMarginTop5">
         <TextView
-            android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="5dp"
             android:text="Promedio de latidos"
             android:textAlignment="textStart"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+            android:textSize="@dimen/spNivel2"
+            android:layout_weight="1"/>
 
         <TextView
             android:id="@+id/txtPromedioLatidos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="20dp"
             android:text="61 BPM"
             android:textAlignment="textEnd"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/textView7"
-            tools:layout_editor_absoluteY="113dp" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:textSize="@dimen/spNivel0"
+            android:textStyle="bold" />
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/btnCorazon"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
-        app:srcCompat="@drawable/ic_corazon" />
+        android:layout_marginTop="@dimen/dpMarginTop"
+        app:srcCompat="@drawable/ic_corazon"
+        android:onClick="btnIrAEscaneoPulso"/>
 
     <TextView
         android:id="@+id/txtBPM"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="@dimen/dpMarginTop"
+        android:textAlignment="center"
         android:text="-- BPM"
-        android:textSize="36dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCorazon" />
+        android:textSize="36dp"/>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/dpMarginTop"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtBPM">
+        android:gravity="center_horizontal">
 
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="15dp"
             android:background="@color/app_button"
             app:cardBackgroundColor="@color/app_button"
             app:cardCornerRadius="8dp"
-            app:contentPadding="10dp">
+            app:contentPadding="10dp"
+            android:onClick="btnIrASaludCardiaca">
 
             <LinearLayout
-                android:layout_width="160dp"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
@@ -127,14 +110,14 @@
                     android:layout_height="wrap_content"
                     android:text="Última medición"
                     android:textAlignment="viewStart"
-                    android:textSize="16dp" />
+                    android:textSize="@dimen/spNivel1" />
 
                 <TextView
                     android:id="@+id/txtUltimaMedicion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="78 BPM"
-                    android:textSize="26dp"
+                    android:textSize="30dp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -142,9 +125,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Pulso estable"
-                    android:textSize="14dp" />
+                    android:textSize="@dimen/spNivel1" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

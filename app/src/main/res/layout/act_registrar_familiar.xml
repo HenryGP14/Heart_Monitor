@@ -150,7 +150,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dpMarginTop"
             android:textSize="@dimen/spNivel2"
-            android:text="Usuario del paciente"/>
+            android:text="Nombre del paciente"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -173,6 +173,24 @@
                 android:layout_height="40dp"
                 android:src="@drawable/ic_buscar"/>
         </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dpMarginTop"
+            android:textSize="@dimen/spNivel2"
+            android:text="Celular de contacto"/>
+        <EditText
+            android:id="@+id/txtCelular_actRegisPacie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dpMarginTop5"
+            android:textSize="@dimen/spNivel2"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:singleLine="true"
+            android:textColorHint="@color/app_font_input"
+            android:backgroundTint="@color/app_input_tint"/>
 
         <Button
             android:id="@+id/btn_registrarPaciente_actRegisPacie"
