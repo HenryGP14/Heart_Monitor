@@ -70,14 +70,14 @@
             android:paddingLeft="8dp">
 
             <TextView
-                android:id="@+id/txtNombresApellidos_actConfiguracion"
+                android:id="@+id/txtNombresAP_Config"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Darlin Omar Buenaño Vera"
                 android:textSize="@dimen/spNivel2" />
 
             <TextView
-                android:id="@+id/txtGeneroEdad_actConfiguracion"
+                android:id="@+id/txtEdad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"

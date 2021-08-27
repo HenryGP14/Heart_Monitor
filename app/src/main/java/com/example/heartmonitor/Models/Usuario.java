@@ -4,6 +4,7 @@ public class Usuario {
     private boolean response;
     private String mensaje;
     private String usuario;
+    private String tipo_cuenta;
     private String clave;
     private Paciente paciente;
     private Familiar familiar;
@@ -42,5 +43,9 @@ public class Usuario {
 
     public void setClave(String clave) {
         this.clave = clave;
+    }
+
+    public String getTipo_cuenta() {
+        return tipo_cuenta;
     }
 }
