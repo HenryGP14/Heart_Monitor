@@ -17,7 +17,8 @@
             android:id="@+id/btnAtras_actSaludCar"
             android:layout_width="26dp"
             android:layout_height="26dp"
-            app:srcCompat="@drawable/ic_atras" />
+            app:srcCompat="@drawable/ic_atras"
+            android:onClick="btnAtras"/>
 
         <LinearLayout
             android:id="@+id/linearLayout2"
@@ -47,7 +48,8 @@
             android:id="@+id/btnConfiguracionSC_actSaludCar"
             android:layout_width="26dp"
             android:layout_height="26dp"
-            app:srcCompat="@drawable/ic_settings" />
+            app:srcCompat="@drawable/ic_settings"
+            android:onClick="btnConfiguracion"/>
     </LinearLayout>
 
     <LinearLayout
@@ -55,7 +57,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_horizontal"
-        android:layout_marginTop="@dimen/dpMarginTop">
+        android:layout_marginTop="30dp">
 
         <ImageView
             android:id="@+id/imageView5"
@@ -64,13 +66,13 @@
             app:srcCompat="@drawable/ic_cuenta" />
 
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/txtNombresApellidos_actSaludCar"
             android:layout_width="wrap_content"
             android:layout_height="26dp"
             android:layout_marginLeft="5dp"
             android:gravity="center"
             android:text="Darlyn Buenaño Vera"
-            android:textSize="@dimen/spNivel3" />
+            android:textSize="@dimen/spNivel2" />
     </LinearLayout>
 
     <LinearLayout
@@ -86,38 +88,45 @@
             android:gravity="center_horizontal|center_vertical">
 
             <ImageButton
+                android:id="@+id/btnDiaAnterior"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/app_button"
-                android:src="@drawable/ic_atras" />
+                android:src="@drawable/ic_atras"
+                android:onClick="btnDiaAnterior"/>
 
             <TextView
                 android:id="@+id/textView10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="@dimen/spNivel2"
                 android:text="18 - 08 - 2021"
                 android:layout_marginLeft="@dimen/dpMarginLR"
                 android:layout_marginRight="@dimen/dpMarginLR"
                 android:textAlignment="center" />
 
             <ImageButton
+                android:id="@+id/btnDiaSiguiente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/app_button"
-                android:src="@drawable/ic_siguiente" />
+                android:src="@drawable/ic_siguiente"
+                android:onClick="btnDiaSiguiente"/>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="@dimen/dpMarginTop"
             android:gravity="center|top"
             android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="160dp"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
+                android:minHeight="100dp"
+                android:layout_weight="1"
                 app:cardBackgroundColor="#07559c"
                 app:cardCornerRadius="8dp">
 
@@ -131,7 +140,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="Ultima medición"
-                        android:textSize="16sp" />
+                        android:textSize="@dimen/spNivel2"/>
 
                     <TextView
                         android:id="@+id/txtUltMed_actSaludCar"
@@ -145,7 +154,9 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="160dp"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
+                android:minHeight="100dp"
+                android:layout_weight="1"
                 android:layout_marginLeft="15dp"
                 app:cardBackgroundColor="#07559c"
                 app:cardCornerRadius="8dp">
@@ -182,7 +193,9 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="160dp"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
+                android:minHeight="100dp"
+                android:layout_weight="1"
                 app:cardBackgroundColor="#07559c"
                 app:cardCornerRadius="8dp">
 
@@ -210,7 +223,9 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="160dp"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
+                android:minHeight="100dp"
+                android:layout_weight="1"
                 android:layout_marginLeft="15dp"
                 app:cardBackgroundColor="#07559c"
                 app:cardCornerRadius="8dp">
@@ -237,13 +252,6 @@
 
             </androidx.cardview.widget.CardView>
         </LinearLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Gráfico de hora - bpm"
-            android:layout_marginTop="20dp"
-            android:textAlignment="center" />
 
     </LinearLayout>
 

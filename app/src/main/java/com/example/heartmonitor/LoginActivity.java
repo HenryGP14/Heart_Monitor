@@ -3,6 +3,7 @@ package com.example.heartmonitor;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -37,16 +38,6 @@ public class LoginActivity extends AppCompatActivity {
         txtUserName = findViewById(R.id.txtUserName);
         txtPassword = findViewById(R.id.txtPassword);
         btn_login = findViewById(R.id.btnIniciarSesison);
-
-        btn_login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                user = txtUserName.getText().toString();
-                pass = txtPassword.getText().toString();
-                chequear_login(user, pass);
-            }
-        });
-
     }
 
 //    API - Volley
@@ -75,6 +66,19 @@ public class LoginActivity extends AppCompatActivity {
 //        Volley.newRequestQueue(this).add(request);
 //    }
 
+    public void longin_onClick(View view){
+        user = txtUserName.getText().toString();
+        pass = txtPassword.getText().toString();
+        if(comprobarConexionAInternet()) {
+            chequear_login(user, pass);
+        }
+    }
+
+    public void registry_onClick(View view){
+        Intent intent = new Intent(LoginActivity.this, RegistrarseComoActivity.class);
+        startActivity(intent);
+    }
+
     public void chequear_login(String user, String pass){
         Retrofit retrofit = RetrofitResponseClient.getRetrofit();
         UsuarioResponse API = retrofit.create(UsuarioResponse.class);
@@ -93,7 +97,7 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), response.body().getMensaje(), Toast.LENGTH_LONG).show();
                     }
                 }else {
-                    Toast.makeText(getApplicationContext(), "Mensaje: Existio un error en la captura de datos", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Mensaje: Existió un error en la captura de datos", Toast.LENGTH_LONG).show();
                 }
             }
 
@@ -107,10 +111,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        if(comprobarConexionAInternet()){
-            Toast.makeText(this.getApplicationContext(), "Conexión establecida a internet", Toast.LENGTH_SHORT).show();
-        }
-        else{
+        if(!comprobarConexionAInternet()){
             Toast.makeText(this.getApplicationContext(), "No hay conexion a internet", Toast.LENGTH_SHORT).show();
         }
     }

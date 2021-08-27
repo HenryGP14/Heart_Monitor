@@ -18,7 +18,8 @@
             android:layout_width="@dimen/dpSizeIcon"
             android:layout_height="@dimen/dpSizeIcon"
             android:backgroundTint="@color/app_background"
-            android:src="@drawable/ic_atras"/>
+            android:src="@drawable/ic_atras"
+            android:onClick="btnIrAtras_actContactos"/>
 
         <LinearLayout
             android:layout_width="match_parent"

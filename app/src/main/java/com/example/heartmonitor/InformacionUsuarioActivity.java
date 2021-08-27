@@ -16,6 +16,10 @@ public class InformacionUsuarioActivity extends AppCompatActivity {
         setContentView(R.layout.act_info_usuario);
     }
 
+    public void btnIrAtras_actInfoUsu(View view){
+        this.finish();
+    }
+
     public void ontouchFotoPerfil(View view){
 
     }
@@ -52,5 +56,14 @@ public class InformacionUsuarioActivity extends AppCompatActivity {
 
     public void ontouchContrasegna(View view){
 
+    }
+
+    public void ontouchGuardarInfoUsuario(View view){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Se actualizaron los datos correctamente");
+        builder.setPositiveButton("Aceptar", null);
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 }
