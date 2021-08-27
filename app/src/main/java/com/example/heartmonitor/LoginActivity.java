@@ -112,6 +112,7 @@ public class LoginActivity extends AppCompatActivity {
                         if (response.body().getTipo_cuenta().equals("Paciente")) {
                             guardar_sesion(response.body().isResponse(),
                                     response.body().getPaciente().getId(),
+                                    response.body().getTipo_cuenta(),
                                     response.body().getPaciente().getNombres(),
                                     response.body().getPaciente().getApellidos(),
                                     response.body().getPaciente().getGenero() == "F"?"Femenino":"Masculino",
@@ -120,11 +121,13 @@ public class LoginActivity extends AppCompatActivity {
                         } else {
                             guardar_sesion(response.body().isResponse(),
                                     response.body().getFamiliar().getId(),
+                                    response.body().getTipo_cuenta(),
                                     response.body().getFamiliar().getNombres(),
                                     response.body().getFamiliar().getApellidos(),
                                     response.body().getTipo_cuenta(), null);
+                            intent = new Intent(LoginActivity.this, ListaPacientesActivity.class);
+
                         }
-                        intent = new Intent(LoginActivity.this, HomeActivity.class);
                         startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP));
                         finish();
                     } else {
@@ -162,9 +165,10 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    private void guardar_sesion(boolean session, int id, String nombres, String apellidos, String tipo, String edad) {
+    private void guardar_sesion(boolean session, int id, String tipoCD, String nombres, String apellidos, String tipo, String edad) {
         editor.putBoolean("logeado", session);
         editor.putInt("idUsuario", id);
+        editor.putString("tipo", tipoCD);
         editor.putString("nombres", nombres);
         editor.putString("apellidos", apellidos);
         editor.putString("genero", tipo);

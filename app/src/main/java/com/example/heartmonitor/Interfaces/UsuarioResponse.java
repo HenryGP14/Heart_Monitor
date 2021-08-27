@@ -40,4 +40,7 @@ public interface UsuarioResponse {
     @GET("paciente/")
     Call<Usuario> GetPaciente(@QueryMap Map<String, String> param);
 
+    @GET("familiar/")
+    Call<Usuario> GetFamiliar(@QueryMap Map<String, Integer> param);
+
 }

@@ -41,25 +41,71 @@
                 android:textSize="@dimen/spNivel1" />
         </LinearLayout>
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dpMarginTop"
-        android:orientation="vertical">
+        android:layout_marginTop="@dimen/dpPaddingItem"
+        android:padding="@dimen/dpPaddingItem"
+        android:background="@color/app_item"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="match_parent"
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="@dimen/dpSizeImg"
+            android:layout_height="@dimen/dpSizeImg"
+            android:src="@drawable/user"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Lista de pacientes"/>
+            android:paddingLeft="@dimen/dpPaddingItem"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-        <ListView
-            android:id="@+id/list_item_paciente"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="@dimen/dpPaddingSubItem"
+                android:paddingBottom="@dimen/dpPaddingSubItem">
+                <ImageView
+                    android:layout_width="@dimen/dpSizeIcon"
+                    android:layout_height="@dimen/dpSizeIcon"
+                    android:src="@drawable/ic_person"/>
 
-        </ListView>
+                <TextView
+                    android:id="@+id/txtNombreP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dpPaddingItem"
+                    android:text="Darling Buenaño" />
+            </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="@dimen/dpPaddingSubItem"
+                android:paddingBottom="@dimen/dpPaddingSubItem">
+                <ImageView
+                    android:layout_width="@dimen/dpSizeIcon"
+                    android:layout_height="@dimen/dpSizeIcon"
+                    android:src="@drawable/ic_gender"/>
+
+                <TextView
+                    android:id="@+id/txtGeneroP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dpPaddingItem"
+                    android:text="Masculino" />
+            </LinearLayout>
+        </LinearLayout>
+        <ImageButton
+            android:id="@+id/btnIrInformUsu_actConfiguracion"
+            android:layout_width="26dp"
+            android:layout_height="55dp"
+            android:background="@color/app_item"
+            android:src="@drawable/ic_siguiente"/>
     </LinearLayout>
 
 </LinearLayout>
