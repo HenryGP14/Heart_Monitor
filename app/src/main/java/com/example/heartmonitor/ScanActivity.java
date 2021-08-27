@@ -213,6 +213,9 @@ public class ScanActivity extends AppCompatActivity {
                 // until it succeeds or throws an exception.
                 mmSocket.connect();
                 Log.d(TAG, "Dispositivo conectado");
+                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP));
+                finish();
             } catch (IOException connectException) {
                 // Unable to connect; close the socket and return.
                 try {
