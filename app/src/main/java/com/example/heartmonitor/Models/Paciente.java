@@ -4,39 +4,32 @@ import java.util.List;
 
 public class Paciente {
     private int id;
-    private String tipo_cuenta;
-    private String fir_nombre;
-    private String sec_nombre;
-    private String fir_apellido;
-    private String sec_apellido;
+    private String nombres;
+    private String apellidos;
     private String fecha_nacimiento;
     private String ruta_foto;
     private String genero;
     private String correo;
     private List<Familiar> familiares;
 
-    public String getTipo_cuenta() {
-        return tipo_cuenta;
+    public Paciente(String nombres, String apellidos, String fecha_nacimiento, String genero, String correo) {
+        this.nombres = nombres;
+        this.apellidos = apellidos;
+        this.fecha_nacimiento = fecha_nacimiento;
+        this.genero = genero;
+        this.correo = correo;
     }
 
     public int getId() {
         return id;
     }
 
-    public String getFir_nombre() {
-        return fir_nombre;
+    public String getNombres() {
+        return nombres;
     }
 
-    public String getSec_nombre() {
-        return sec_nombre;
-    }
-
-    public String getFir_apellido() {
-        return fir_apellido;
-    }
-
-    public String getSec_apellido() {
-        return sec_apellido;
+    public String getApellidos() {
+        return apellidos;
     }
 
     public String getFecha_nacimiento() {

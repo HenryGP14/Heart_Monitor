@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -8,22 +8,23 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="@dimen/dpPaddingContainer"
         android:orientation="vertical"
+        android:padding="@dimen/dpPaddingContainer"
         tools:context=".RegistrarPacienteActivity">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="@dimen/dpMarginBottom">
+            android:layout_marginBottom="@dimen/dpMarginBottom"
+            android:orientation="horizontal">
 
             <ImageButton
                 android:id="@+id/btnAtras_actRegisPacie"
                 android:layout_width="@dimen/dpSizeIcon"
                 android:layout_height="@dimen/dpSizeIcon"
                 android:backgroundTint="@color/app_background"
-                android:src="@drawable/ic_atras"/>
+                android:onClick="btnAtras_onClick"
+                android:src="@drawable/ic_atras" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -46,151 +47,185 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dpMarginTop"
-            android:textSize="@dimen/spNivel2"
-            android:text="Nombres y apellidos"/>
+            android:text="Nombres"
+            android:textSize="@dimen/spNivel2" />
+
         <EditText
-            android:id="@+id/txtNombresApellidos_actRegisPacie"
+            android:id="@+id/txtNombre_Familiar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dpMarginTop5"
-            android:hint="Darling Omar Buenaño Vera"
-            android:textSize="@dimen/spNivel2"
+            android:backgroundTint="@color/app_input_tint"
             android:inputType="text"
             android:maxLength="32"
             android:singleLine="true"
             android:textColorHint="@color/app_font_input"
-            android:backgroundTint="@color/app_input_tint"/>
+            android:textSize="@dimen/spNivel2" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dpMarginTop"
-            android:textSize="@dimen/spNivel2"
-            android:text="Nombre de usuario"/>
+            android:text="Apellidos"
+            android:textSize="@dimen/spNivel2" />
+
         <EditText
-            android:id="@+id/txtNOmbreUsuario_actRegisPacie"
+            android:id="@+id/txtApellidos_Familiar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dpMarginTop5"
-            android:hint="DarlingBV05"
-            android:textSize="@dimen/spNivel2"
+            android:backgroundTint="@color/app_input_tint"
+            android:inputType="text"
+            android:maxLength="32"
+            android:singleLine="true"
+            android:textColorHint="@color/app_font_input"
+            android:textSize="@dimen/spNivel2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dpMarginTop"
+            android:text="Nombre de usuario"
+            android:textSize="@dimen/spNivel2" />
+
+        <EditText
+            android:id="@+id/txtUsuario_Familiar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dpMarginTop5"
+            android:backgroundTint="@color/app_input_tint"
             android:inputType="text"
             android:maxLength="25"
             android:singleLine="true"
             android:textColorHint="@color/app_font_input"
-            android:backgroundTint="@color/app_input_tint"/>
+            android:textSize="@dimen/spNivel2" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dpMarginTop"
-            android:textSize="@dimen/spNivel2"
-            android:text="Género"/>
+            android:text="Género"
+            android:textSize="@dimen/spNivel2" />
+
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <RadioButton
+                android:id="@+id/rbMasculino_Familiar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Masculino"
-                android:buttonTint="@color/app_input_tint"
                 android:backgroundTint="@color/app_font_input"
-                android:textColor="@color/app_font_input"/>
+                android:buttonTint="@color/app_input_tint"
+                android:text="Masculino"
+                android:textColor="@color/app_font_input" />
+
             <RadioButton
+                android:id="@+id/rbFemenino_Familiar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/dpMarginLR"
-                android:text="Femenino"
-                android:buttonTint="@color/app_input_tint"
                 android:backgroundTint="@color/app_font_input"
-                android:textColor="@color/app_font_input"/>
+                android:buttonTint="@color/app_input_tint"
+                android:text="Femenino"
+                android:textColor="@color/app_font_input" />
         </RadioGroup>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dpMarginTop"
-            android:textSize="@dimen/spNivel2"
-            android:text="Contraseña"/>
+            android:text="Contraseña"
+            android:textSize="@dimen/spNivel2" />
+
         <EditText
-            android:id="@+id/txtClave_actRegisPacie"
+            android:id="@+id/txtClave_Familiar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dpMarginTop5"
+            android:backgroundTint="@color/app_input_tint"
             android:hint=""
-            android:textSize="@dimen/spNivel2"
             android:inputType="textPassword"
             android:maxLength="18"
             android:singleLine="true"
             android:textColorHint="@color/app_font_input"
-            android:backgroundTint="@color/app_input_tint"/>
+            android:textSize="@dimen/spNivel2" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dpMarginTop"
-            android:textSize="@dimen/spNivel2"
-            android:text="Confirmar contraseña"/>
+            android:text="Confirmar contraseña"
+            android:textSize="@dimen/spNivel2" />
+
         <EditText
-            android:id="@+id/txtConfirmarClave_actRegisPacie"
+            android:id="@+id/txtClaveConf_Familiar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dpMarginTop5"
+            android:backgroundTint="@color/app_input_tint"
             android:hint=""
-            android:textSize="@dimen/spNivel2"
             android:inputType="textPassword"
             android:maxLength="18"
             android:singleLine="true"
             android:textColorHint="@color/app_font_input"
-            android:backgroundTint="@color/app_input_tint"/>
+            android:textSize="@dimen/spNivel2" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dpMarginTop"
-            android:textSize="@dimen/spNivel2"
-            android:text="Nombre del paciente"/>
+            android:text="Nombre del paciente"
+            android:textSize="@dimen/spNivel2" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:orientation="horizontal">
+
             <EditText
                 android:id="@+id/txtBuscarUsuario_actRegisFam"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dpMarginTop5"
-                android:textSize="@dimen/spNivel2"
-                android:inputType="textPassword"
+                android:backgroundTint="@color/app_input_tint"
                 android:maxLength="25"
-                android:singleLine="true"
                 android:textColorHint="@color/app_font_input"
-                android:backgroundTint="@color/app_input_tint"/>
+                android:textSize="@dimen/spNivel2" />
 
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_buscar"/>
+            <Button
+                android:id="@+id/btn_busqUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="chequearUsuario_onClick"
+                android:text="Buscar"
+                app:icon="@drawable/ic_buscar"
+                app:iconGravity="end" />
+
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dpMarginTop"
-            android:textSize="@dimen/spNivel2"
-            android:text="Celular de contacto"/>
+            android:text="Celular de contacto"
+            android:textSize="@dimen/spNivel2" />
+
         <EditText
-            android:id="@+id/txtCelular_actRegisPacie"
+            android:id="@+id/txtCelular_Familiar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dpMarginTop5"
-            android:textSize="@dimen/spNivel2"
+            android:backgroundTint="@color/app_input_tint"
             android:inputType="phone"
             android:maxLength="10"
+            android:onClick="btnCancelar_onClick"
             android:singleLine="true"
             android:textColorHint="@color/app_font_input"
-            android:backgroundTint="@color/app_input_tint"/>
+            android:textSize="@dimen/spNivel2" />
 
         <Button
             android:id="@+id/btn_registrarPaciente_actRegisPacie"
@@ -198,11 +233,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dpMarginTop"
             android:fontFamily="@font/roboto_regular"
+            android:onClick="btnRegistrar_onClick"
             android:padding="8dp"
             android:text="Registrar"
             android:textAlignment="center"
             android:textAllCaps="false"
-            android:textSize="@dimen/spNivel2"/>
+            android:textSize="@dimen/spNivel2" />
 
         <Button
             android:id="@+id/btn_cancelarRegistroPaciente"
@@ -213,7 +249,7 @@
             android:text="Cancelar"
             android:textAlignment="center"
             android:textAllCaps="false"
-            android:textSize="@dimen/spNivel2"/>
+            android:textSize="@dimen/spNivel2" />
 
     </LinearLayout>
 

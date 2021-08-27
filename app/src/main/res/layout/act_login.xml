@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -87,11 +85,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dpMarginTop"
             android:fontFamily="@font/roboto_regular"
+            android:onClick="longin_onClick"
             android:padding="8dp"
             android:text="Iniciar sesión"
             android:textAlignment="center"
             android:textAllCaps="false"
-            android:textSize="@dimen/spNivel1"/>
+            android:textSize="@dimen/spNivel1" />
 
         <Button
             android:id="@+id/btnRegistrarse"
@@ -99,11 +98,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dpMarginTop5"
             android:fontFamily="@font/roboto_regular"
+            android:onClick="registry_onClick"
             android:padding="8dp"
             android:text="Registrarse"
             android:textAlignment="center"
             android:textAllCaps="false"
-            android:textSize="@dimen/spNivel1"/>
+            android:textSize="@dimen/spNivel1" />
 
     </LinearLayout>
 

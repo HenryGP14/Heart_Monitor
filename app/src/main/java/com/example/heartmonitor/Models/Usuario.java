@@ -4,9 +4,22 @@ public class Usuario {
     private boolean response;
     private String mensaje;
     private String usuario;
+    private String clave;
     private Paciente paciente;
     private Familiar familiar;
-    
+
+    public Usuario(String usuario, String clave, Paciente paciente) {
+        this.usuario = usuario;
+        this.clave = clave;
+        this.paciente = paciente;
+    }
+
+    public Usuario(String usuario, String clave, Familiar familiar) {
+        this.usuario = usuario;
+        this.clave = clave;
+        this.familiar = familiar;
+    }
+
     public boolean isResponse() {
         return response;
     }
@@ -25,5 +38,9 @@ public class Usuario {
 
     public Familiar getFamiliar() {
         return familiar;
+    }
+
+    public void setClave(String clave) {
+        this.clave = clave;
     }
 }

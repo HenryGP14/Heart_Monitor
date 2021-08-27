@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="@dimen/dpPaddingContainer"
@@ -24,7 +23,8 @@
                 android:layout_width="@dimen/dpSizeIcon"
                 android:layout_height="@dimen/dpSizeIcon"
                 android:backgroundTint="@color/app_background"
-                android:src="@drawable/ic_atras"/>
+                android:onClick="btnAtras_onClick"
+                android:src="@drawable/ic_atras" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -48,19 +48,37 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dpMarginTop"
             android:textSize="@dimen/spNivel2"
-            android:text="Nombres y apellidos"/>
+            android:text="Nombres"/>
+
         <EditText
-            android:id="@+id/txtNombresApellidos_actRegisPacie"
+            android:id="@+id/txtNombres_Paciente"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dpMarginTop5"
-            android:hint="Darling Omar Buenaño Vera"
-            android:textSize="@dimen/spNivel2"
+            android:backgroundTint="@color/app_input_tint"
             android:inputType="text"
             android:maxLength="32"
             android:singleLine="true"
             android:textColorHint="@color/app_font_input"
-            android:backgroundTint="@color/app_input_tint"/>
+            android:textSize="@dimen/spNivel2" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dpMarginTop"
+            android:textSize="@dimen/spNivel2"
+            android:text="Apellidos"/>
+
+        <EditText
+            android:id="@+id/txtApellidos_Paciente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dpMarginTop5"
+            android:backgroundTint="@color/app_input_tint"
+            android:inputType="text"
+            android:maxLength="32"
+            android:singleLine="true"
+            android:textColorHint="@color/app_font_input"
+            android:textSize="@dimen/spNivel2" />
 
         <TextView
             android:layout_width="match_parent"
@@ -68,18 +86,18 @@
             android:layout_marginTop="@dimen/dpMarginTop"
             android:textSize="@dimen/spNivel2"
             android:text="Nombre de usuario"/>
+
         <EditText
-            android:id="@+id/txtNOmbreUsuario_actRegisPacie"
+            android:id="@+id/txtUsuario_Paciente"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dpMarginTop5"
-            android:hint="DarlingBV05"
-            android:textSize="@dimen/spNivel2"
+            android:backgroundTint="@color/app_input_tint"
             android:inputType="text"
             android:maxLength="25"
             android:singleLine="true"
             android:textColorHint="@color/app_font_input"
-            android:backgroundTint="@color/app_input_tint"/>
+            android:textSize="@dimen/spNivel2" />
 
         <TextView
             android:layout_width="match_parent"
@@ -87,17 +105,16 @@
             android:layout_marginTop="@dimen/dpMarginTop"
             android:textSize="@dimen/spNivel2"
             android:text="Fecha de nacimiento"/>
+
         <EditText
-            android:id="@+id/txtFechaNacimiento_actRegisPacie"
+            android:id="@+id/txtFecha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dpMarginTop5"
-            android:hint="01/01/2000"
-            android:textSize="@dimen/spNivel2"
+            android:backgroundTint="@color/app_input_tint"
+            android:ems="10"
+            android:hint="DD/MM/YYYY"
             android:inputType="date"
-            android:singleLine="true"
-            android:textColorHint="@color/app_font_input"
-            android:backgroundTint="@color/app_input_tint"/>
+            android:textColorHint="@color/app_border_input" />
 
         <TextView
             android:layout_width="match_parent"
@@ -109,21 +126,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <RadioButton
+                android:id="@+id/rbMasculino_Paciente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Masculino"
-                android:buttonTint="@color/app_input_tint"
                 android:backgroundTint="@color/app_font_input"
-                android:textColor="@color/app_font_input"/>
+                android:buttonTint="@color/app_input_tint"
+                android:text="Masculino"
+                android:textColor="@color/app_font_input" />
+
             <RadioButton
+                android:id="@+id/rbFemenino_Paciente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/dpMarginLR"
-                android:text="Femenino"
-                android:buttonTint="@color/app_input_tint"
                 android:backgroundTint="@color/app_font_input"
-                android:textColor="@color/app_font_input"/>
+                android:buttonTint="@color/app_input_tint"
+                android:text="Femenino"
+                android:textColor="@color/app_font_input" />
         </RadioGroup>
 
         <TextView
@@ -132,17 +153,18 @@
             android:layout_marginTop="@dimen/dpMarginTop"
             android:textSize="@dimen/spNivel2"
             android:text="Correo electrónico"/>
+
         <EditText
-            android:id="@+id/txtCorreo_actRegisPacie"
+            android:id="@+id/txtCorreo_Paciente"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dpMarginTop5"
+            android:backgroundTint="@color/app_input_tint"
             android:hint="ejemplo@gmail.com"
-            android:textSize="@dimen/spNivel2"
             android:inputType="textEmailAddress"
             android:singleLine="true"
             android:textColorHint="@color/app_font_input"
-            android:backgroundTint="@color/app_input_tint"/>
+            android:textSize="@dimen/spNivel2" />
 
         <TextView
             android:layout_width="match_parent"
@@ -151,7 +173,7 @@
             android:textSize="@dimen/spNivel2"
             android:text="Contraseña"/>
         <EditText
-            android:id="@+id/txtClave_actRegisPacie"
+            android:id="@+id/txtClave_Paciente"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dpMarginTop5"
@@ -169,18 +191,19 @@
             android:layout_marginTop="@dimen/dpMarginTop"
             android:textSize="@dimen/spNivel2"
             android:text="Confirmar contraseña"/>
+
         <EditText
-            android:id="@+id/txtConfirmarClave_actRegisPacie"
+            android:id="@+id/txtClaveConf_Paciente"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="41dp"
             android:layout_marginTop="@dimen/dpMarginTop5"
+            android:backgroundTint="@color/app_input_tint"
             android:hint=""
-            android:textSize="@dimen/spNivel2"
             android:inputType="textPassword"
             android:maxLength="18"
             android:singleLine="true"
             android:textColorHint="@color/app_font_input"
-            android:backgroundTint="@color/app_input_tint"/>
+            android:textSize="@dimen/spNivel2" />
 
         <Button
             android:id="@+id/btn_registrarPaciente_actRegisPacie"
@@ -188,11 +211,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dpMarginTop"
             android:fontFamily="@font/roboto_regular"
+            android:onClick="btnRegistrar_onClick"
             android:padding="8dp"
             android:text="Registrar"
             android:textAlignment="center"
             android:textAllCaps="false"
-            android:textSize="@dimen/spNivel2"/>
+            android:textSize="@dimen/spNivel2" />
 
         <Button
             android:id="@+id/btn_cancelarRegistroPaciente"
@@ -200,11 +224,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dpMarginTop"
             android:fontFamily="@font/roboto_regular"
+            android:onClick="btnCancelar_onClick"
             android:padding="8dp"
             android:text="Cancelar"
             android:textAlignment="center"
             android:textAllCaps="false"
-            android:textSize="@dimen/spNivel2"/>
+            android:textSize="@dimen/spNivel2" />
 
     </LinearLayout>
 
