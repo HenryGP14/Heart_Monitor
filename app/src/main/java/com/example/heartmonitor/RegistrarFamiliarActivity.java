@@ -2,6 +2,7 @@ package com.example.heartmonitor;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -48,9 +49,9 @@ public class RegistrarFamiliarActivity extends AppCompatActivity {
         M = findViewById(R.id.rbMasculino_Familiar);
     }
 
-    public void btnRegistrar_onClick(View view){
+    public void btnRegistrar_onClick(View view) {
         String genero = "";
-        if(txtClave.getText().toString().equals(txtClaveConf.getText().toString())) {
+        if (txtClave.getText().toString().equals(txtClaveConf.getText().toString())) {
             if (M.isChecked())
                 genero = "M";
             else
@@ -73,7 +74,10 @@ public class RegistrarFamiliarActivity extends AppCompatActivity {
                 public void onResponse(Call<Usuario> call, Response<Usuario> response) {
                     if (response.isSuccessful()) {
                         if (response.body().isResponse()) {
-                            Toast.makeText(getApplicationContext(), response.body().getMensaje(), Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(RegistrarFamiliarActivity.this, LoginActivity.class);
+                            Toast.makeText(getApplicationContext(), response.body().getMensaje() + ", puedes iniciar sesión.", Toast.LENGTH_LONG).show();
+                            startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP));
+                            finish();
                         } else {
                             Toast.makeText(getApplicationContext(), response.body().getMensaje(), Toast.LENGTH_LONG).show();
                         }
@@ -87,7 +91,7 @@ public class RegistrarFamiliarActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Mensaje: El servidor esta apagado...", Toast.LENGTH_LONG).show();
                 }
             });
-        }else{
+        } else {
             Toast.makeText(getApplicationContext(), "La contraseña no coinciden, intentalo nuevamente..", Toast.LENGTH_LONG).show();
         }
     }
@@ -122,5 +126,14 @@ public class RegistrarFamiliarActivity extends AppCompatActivity {
         });
     }
 
+    public void btnAtras_onClick(View view) {
+        onBackPressed();
+        finish();
+    }
+
+    public void btnCancelar_onClick(View view) {
+        onBackPressed();
+        finish();
+    }
 
 }

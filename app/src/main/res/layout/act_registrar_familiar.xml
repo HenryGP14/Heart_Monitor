@@ -23,6 +23,7 @@
                 android:layout_width="@dimen/dpSizeIcon"
                 android:layout_height="@dimen/dpSizeIcon"
                 android:backgroundTint="@color/app_background"
+                android:onClick="btnAtras_onClick"
                 android:src="@drawable/ic_atras" />
 
             <LinearLayout
@@ -221,6 +222,7 @@
             android:backgroundTint="@color/app_input_tint"
             android:inputType="phone"
             android:maxLength="10"
+            android:onClick="btnCancelar_onClick"
             android:singleLine="true"
             android:textColorHint="@color/app_font_input"
             android:textSize="@dimen/spNivel2" />

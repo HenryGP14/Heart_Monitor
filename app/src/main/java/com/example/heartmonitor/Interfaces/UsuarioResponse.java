@@ -31,7 +31,7 @@ public interface UsuarioResponse {
 
     @FormUrlEncoded
     @POST("paciente/")
-    Call<Usuario> AddPacienteResponse(@Body Usuario objeto_paciente);
+    Call<Usuario> AddPacienteResponse(@FieldMap Map<String, String> param);
 
     @FormUrlEncoded
     @PUT("paciente/")
