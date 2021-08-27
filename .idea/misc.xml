@@ -18,6 +18,7 @@
         <entry key="..\:/Ingenieria de Software/7mo Semestre/Aplicaciones Distribuidas/Proyecto de Aula/Heart_Monitor/app/src/main/res/layout/act_contactos.xml" value="0.33" />
         <entry key="..\:/Ingenieria de Software/7mo Semestre/Aplicaciones Distribuidas/Proyecto de Aula/Heart_Monitor/app/src/main/res/layout/act_home.xml" value="0.33" />
         <entry key="..\:/Ingenieria de Software/7mo Semestre/Aplicaciones Distribuidas/Proyecto de Aula/Heart_Monitor/app/src/main/res/layout/act_info_usuario.xml" value="0.5" />
+        <entry key="..\:/Ingenieria de Software/7mo Semestre/Aplicaciones Distribuidas/Proyecto de Aula/Heart_Monitor/app/src/main/res/layout/act_lista_pacientes.xml" value="0.5" />
         <entry key="..\:/Ingenieria de Software/7mo Semestre/Aplicaciones Distribuidas/Proyecto de Aula/Heart_Monitor/app/src/main/res/layout/act_login.xml" value="0.33" />
         <entry key="..\:/Ingenieria de Software/7mo Semestre/Aplicaciones Distribuidas/Proyecto de Aula/Heart_Monitor/app/src/main/res/layout/act_medicion_frec.xml" value="0.5" />
         <entry key="..\:/Ingenieria de Software/7mo Semestre/Aplicaciones Distribuidas/Proyecto de Aula/Heart_Monitor/app/src/main/res/layout/act_registrar_familiar.xml" value="0.27239583333333334" />
@@ -27,6 +28,8 @@
         <entry key="..\:/Ingenieria de Software/7mo Semestre/Aplicaciones Distribuidas/Proyecto de Aula/Heart_Monitor/app/src/main/res/layout/act_scan.xml" value="0.27291666666666664" />
         <entry key="..\:/Ingenieria de Software/7mo Semestre/Aplicaciones Distribuidas/Proyecto de Aula/Heart_Monitor/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Ingenieria de Software/7mo Semestre/Aplicaciones Distribuidas/Proyecto de Aula/Heart_Monitor/app/src/main/res/layout/atc_home.xml" value="0.33" />
+        <entry key="..\:/Ingenieria de Software/7mo Semestre/Aplicaciones Distribuidas/Proyecto de Aula/Heart_Monitor/app/src/main/res/layout/item_device_name.xml" value="0.27291666666666664" />
+        <entry key="..\:/Ingenieria de Software/7mo Semestre/Aplicaciones Distribuidas/Proyecto de Aula/Heart_Monitor/app/src/main/res/layout/item_paciente.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/henry/AndroidStudioProjects/HeartMonitor/app/src/main/res/layout/activity_main.xml" value="0.384375" />
       </map>
     </option>

@@ -17,11 +17,14 @@
         android:theme="@style/Theme.HeartMonitor"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ListaPacientesActivity"
+            android:exported="true" />
+        <activity
             android:name=".ConfiguracionActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".SaludCardiacaActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".RegistrarFamiliarActivity"
             android:exported="true" />
