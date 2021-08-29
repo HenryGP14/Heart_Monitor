@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Heart Monitor</string>
+    
+    <string-array name="repetirCiclo_array">
+        <item>cada 3 minutos</item>
+        <item>cada 4 minutos</item>
+        <item>cada 5 minutos</item>
+        <item>cada 6 minutos</item>
+    </string-array>
+
+    <string-array name="cambiarGenero_array">
+        <item>Masculino</item>
+        <item>Femenino</item>
+    </string-array>
 </resources>

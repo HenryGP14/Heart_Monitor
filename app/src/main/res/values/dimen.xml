@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="spNivelTitle">40sp</dimen>
-    <dimen name="spNivel0">20sp</dimen>
-    <dimen name="spNivel1">18sp</dimen>
-    <dimen name="spNivel2">16sp</dimen>
-    <dimen name="spNivel3">14sp</dimen>
-    <dimen name="spNivel4">12sp</dimen>
+    <dimen name="spNivel0">22sp</dimen>
+    <dimen name="spNivel1">20sp</dimen>
+    <dimen name="spNivel2">18sp</dimen>
+    <dimen name="spNivel3">16sp</dimen>
+    <dimen name="spNivel4">14sp</dimen>
+    <dimen name="spNivel5">12sp</dimen>
 
     <dimen name="dpSizeImg">55dp</dimen>
     <dimen name="dpPaddingItem">8dp</dimen>
     <dimen name="dpPaddingSubItem">5dp</dimen>
-    <dimen name="dpPaddingContainer">16dp</dimen>
+    <dimen name="dpPaddingContainer">15dp</dimen>
 
     <dimen name="dpRadius">9dp</dimen>
 
