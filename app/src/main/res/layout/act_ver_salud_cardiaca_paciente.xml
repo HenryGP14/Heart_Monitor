@@ -6,19 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/dpPaddingContainer"
-    tools:context=".SaludCardiacaActivity"
+    tools:context=".VerSaludCardiacaPacienteActivity"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/btnAtras_actSaludCar"
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            app:srcCompat="@drawable/ic_atras"
-            android:onClick="btnAtras"/>
 
         <LinearLayout
             android:id="@+id/linearLayout2"
@@ -49,29 +42,76 @@
             android:layout_width="26dp"
             android:layout_height="26dp"
             app:srcCompat="@drawable/ic_settings"
-            android:onClick="btnConfiguracion"/>
+            android:onClick="btnIrAConfiguracion"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpMarginTop30"
+        android:textSize="@dimen/spNivel2"
+        android:text="Monitoreando al paciente:"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="@dimen/dpMarginTop"
+        android:background="@color/app_item"
+        android:padding="@dimen/dpPaddingItem"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgPaciente_actVerSaludCar"
+            android:layout_width="@dimen/dpSizeImg"
+            android:layout_height="@dimen/dpSizeImg"
+            android:src="@drawable/user" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="8dp">
+
+            <TextView
+                android:id="@+id/txtNombresAP_actVerSaludCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Darlin Omar Buenaño Vera"
+                android:textSize="@dimen/spNivel2" />
+
+            <TextView
+                android:id="@+id/txtEdad_actVerSaludCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Masculino, 21 años de edad"
+                android:textSize="@dimen/spNivel3" />
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center_horizontal"
-        android:layout_marginTop="30dp">
-
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="@dimen/dpSizeIcon"
-            android:layout_height="@dimen/dpSizeIcon"
-            app:srcCompat="@drawable/ic_cuenta" />
+        android:layout_marginTop="10dp">
 
         <TextView
-            android:id="@+id/txtNombresApellidos_actSaludCar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fecha:   "
+            android:textSize="@dimen/spNivel2"/>
+
+        <TextView
+            android:id="@+id/txtFecha_actVerSaludCar"
             android:layout_width="wrap_content"
             android:layout_height="26dp"
             android:layout_marginLeft="5dp"
             android:gravity="center"
-            android:text="Darlyn Buenaño Vera"
+            android:text="Hoy, 29 de agosto del 2021"
             android:textSize="@dimen/spNivel2" />
     </LinearLayout>
 
@@ -79,46 +119,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="@dimen/dpMarginTop">
+        android:layout_marginTop="@dimen/dpMarginTop30">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_horizontal|center_vertical">
-
-            <ImageButton
-                android:id="@+id/btnDiaAnterior"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/app_button"
-                android:src="@drawable/ic_atras"
-                android:onClick="btnDiaAnterior"/>
-
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/spNivel2"
-                android:text="18 - 08 - 2021"
-                android:layout_marginLeft="@dimen/dpMarginLR"
-                android:layout_marginRight="@dimen/dpMarginLR"
-                android:textAlignment="center" />
-
-            <ImageButton
-                android:id="@+id/btnDiaSiguiente"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/app_button"
-                android:src="@drawable/ic_siguiente"
-                android:onClick="btnDiaSiguiente"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dpMarginTop"
             android:gravity="center|top"
             android:orientation="horizontal">
 
@@ -143,7 +148,7 @@
                         android:textSize="@dimen/spNivel2"/>
 
                     <TextView
-                        android:id="@+id/txtUltMed_actSaludCar"
+                        android:id="@+id/txtUltMed_actVerSaludCar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="97 BPM"
@@ -174,7 +179,7 @@
                         android:textSize="16sp" />
 
                     <TextView
-                        android:id="@+id/txtPromFreCar_actSaludCar"
+                        android:id="@+id/txtPromFreCar_actVerSaludCar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="89 BPM"
@@ -212,7 +217,7 @@
                         android:textSize="16sp" />
 
                     <TextView
-                        android:id="@+id/txtFreCarMin_actSaludCar"
+                        android:id="@+id/txtFreCarMin_actVerSaludCar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="97 BPM"
@@ -243,7 +248,7 @@
                         android:textSize="16sp" />
 
                     <TextView
-                        android:id="@+id/txtProFreCarMax_actSaludCar"
+                        android:id="@+id/txtProFreCarMax_actVerSaludCar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="89 BPM"

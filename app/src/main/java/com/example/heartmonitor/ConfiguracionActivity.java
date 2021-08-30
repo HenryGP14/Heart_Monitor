@@ -1,8 +1,10 @@
 package com.example.heartmonitor;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -17,6 +19,7 @@ public class ConfiguracionActivity extends AppCompatActivity {
     private SharedPreferences preferencia;
     private SharedPreferences.Editor editor;
     private TextView txtNombresAP, txtDatos;
+    AlertDialog.Builder builder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +47,7 @@ public class ConfiguracionActivity extends AppCompatActivity {
         txtNombresAP.setText(nombres + " " + apellidos);
         txtDatos.setText(genero + ", " + anos + " años");
 
+        builder = new AlertDialog.Builder(this);
     }
 
     public void btnAtras_actConf(View view) {
@@ -71,14 +75,23 @@ public class ConfiguracionActivity extends AppCompatActivity {
     }
 
     public void btnCerrarSesion(View view) {
-        editor.remove("logeado");
-        editor.remove("idUsuario");
-        editor.remove("nombres");
-        editor.remove("apellidos");
-        editor.remove("tipo");
-        editor.apply();
-        Intent intent = new Intent(ConfiguracionActivity.this, LoginActivity.class);
-        startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP));
-        finish();
+        builder.setMessage("¿Está seguro de cerrar sesión?");
+        builder.setPositiveButton("Estoy seguro", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                editor.remove("logeado");
+                editor.remove("idUsuario");
+                editor.remove("nombres");
+                editor.remove("apellidos");
+                editor.remove("tipo");
+                editor.apply();
+                Intent intent = new Intent(ConfiguracionActivity.this, LoginActivity.class);
+                startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP));
+                finish();
+            }
+        });
+        builder.setNegativeButton("Cancelar", null);
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 }

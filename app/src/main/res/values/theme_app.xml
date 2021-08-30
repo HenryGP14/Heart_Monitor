@@ -5,6 +5,7 @@
         <item name="colorPrimary">@color/app_button</item> <!--Color para los botones-->
         <item name="colorPrimaryVariant">@color/app_font</item> <!--Color para la fuente del boton primary-->
         <item name="colorOnPrimary">@color/app_font</item> <!--Color para la fuente cuando el primario esta seleccionado-->
+        <item name="colorPrimaryDark">@color/app_primary_dark</item>
 
         <item name="colorSurface">@color/app_font</item> <!--Color para la fuente de una tarjeta-->
         <item name="colorOnSurface">@color/black</item> <!--Color para la fuente-->
