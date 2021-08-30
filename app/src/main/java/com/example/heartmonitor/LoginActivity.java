@@ -124,7 +124,7 @@ public class LoginActivity extends AppCompatActivity {
                                     response.body().getFamiliar().getNombres(),
                                     response.body().getFamiliar().getApellidos(),
                                     response.body().getTipo_cuenta(), null);
-                            intent = new Intent(LoginActivity.this, ListaPacientesActivity.class);
+                            intent = new Intent(LoginActivity.this, VerSaludCardiacaPacienteActivity.class);
 
                         }
                         startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP));

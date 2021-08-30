@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.TextView;
 
@@ -75,7 +76,7 @@ public class ConfiguracionActivity extends AppCompatActivity {
     }
 
     public void btnCerrarSesion(View view) {
-        builder.setMessage("¿Está seguro de cerrar sesión?");
+        builder.setMessage(Html.fromHtml("<font color='#05294A'>¿Está seguro de cerrar sesión??</font>"));
         builder.setPositiveButton("Estoy seguro", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
