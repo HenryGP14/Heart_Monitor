@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Heart Monitor</string>
-    
+
     <string-array name="repetirCiclo_array">
         <item>cada 3 minutos</item>
         <item>cada 4 minutos</item>
