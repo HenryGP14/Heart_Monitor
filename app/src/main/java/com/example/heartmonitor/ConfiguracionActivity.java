@@ -51,8 +51,8 @@ public class ConfiguracionActivity extends AppCompatActivity {
     }
 
     public void btnIrBuscarDispositivo(View view) {
-        /*Intent puente = new Intent(getApplicationContext(), SaludCardiacaActivity.class);
-        startActivity(puente);*/
+        Intent puente = new Intent(getApplicationContext(), ScanActivity.class);
+        startActivity(puente);
     }
 
     public void btnIrInformUsuario(View view) {
